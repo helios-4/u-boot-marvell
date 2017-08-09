@@ -84,6 +84,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	#define BUS_WIDTH_CUST_BOARD_2		BUS_WIDTH_8
 	#define SPEED_BIN_DDR_CLEARFOG_BOARD	SPEED_BIN_DDR_1600K
 	#define BUS_WIDTH_CLEARFOG_BOARD	BUS_WIDTH_16
+	#define SPEED_BIN_DDR_HELIOS4_BOARD	SPEED_BIN_DDR_1600K
+	#define BUS_WIDTH_HELIOS4_BOARD		BUS_WIDTH_16
 
 	#define SPEED_BIN_DDR_DB_68XX		SPEED_BIN_DDR_1866L
 	#define BUS_WIDTH_DB_68XX			BUS_WIDTH_8
@@ -126,6 +128,13 @@ MV_HWS_TOPOLOGY_MAP TopologyMap[] =
     0x1, /* active interfaces */
     /*cs_mask, mirror, dqs_swap, ck_swap X PUPs                                     speed_bin             memory_device_width  mem_size     frequency  casL casWL      temperature */
 	{{{{0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}}, SPEED_BIN_DDR_CLEARFOG_BOARD, BUS_WIDTH_CLEARFOG_BOARD , MEM_4G, DDR_FREQ_800, 0 ,   0 , MV_HWS_TEMP_LOW}},
+    INTERFACE_BUS_MASK_32BIT  /* Buses mask */
+    },
+    /* 4th Customer board  -  Helios4 */
+    {
+    0x1, /* active interfaces */
+    /*cs_mask, mirror, dqs_swap, ck_swap X PUPs                                     speed_bin             memory_device_width  mem_size     frequency  casL casWL      temperature */
+	{{{{0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}, {0x1,0,0,0}}, SPEED_BIN_DDR_HELIOS4_BOARD, BUS_WIDTH_HELIOS4_BOARD , MEM_4G, DDR_FREQ_800, 0 ,   0 , MV_HWS_TEMP_LOW}},
     INTERFACE_BUS_MASK_32BIT  /* Buses mask */
     }
 };

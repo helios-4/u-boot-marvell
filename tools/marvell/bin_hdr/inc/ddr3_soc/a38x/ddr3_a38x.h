@@ -83,7 +83,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define MV_DDR_CONTROLLER_BUS_WIDTH_MULTIPLIER		1
 
 /*Tune internal training params values*/
-#ifdef CONFIG_CLEARFOG_BOARD
+#if defined(CONFIG_CLEARFOG_BOARD) || defined(CONFIG_HELIOS4_BOARD)
 	/* SolidRun Armada 38x MicroSOM has short traces on it's DDR clock.
 	   using increased internal delay inside the SoC to compensate for that */
 	#define MV_TUNE_TRAINING_PARAMS_CK_DELAY 	260

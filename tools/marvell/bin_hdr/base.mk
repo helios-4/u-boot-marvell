@@ -86,6 +86,9 @@ endif
 ifeq "$(CONFIG_CLEARFOG_BOARD)"  "y"
   CFLAGS += -DCONFIG_CLEARFOG_BOARD
 endif
+ifeq "$(CONFIG_HELIOS4_BOARD)"  "y"
+  CFLAGS += -DCONFIG_HELIOS4_BOARD
+endif
 
 # AXP
 ifeq "$(CONFIG_DB_78x60_BP_REV2)"  "y"
