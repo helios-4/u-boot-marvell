@@ -533,7 +533,9 @@ MV_BOARD_TWSI_INFO armada_38x_helios4_BoardTwsiDev[] = {
 MV_BOARD_MAC_INFO armada_38x_helios4_BoardMacInfo[] = {
 	/* {{MV_BOARD_MAC_SPEED boardMacSpeed, MV_32 boardEthSmiAddr ,
 	   MV_32 boardEthSmiAddr0 , MV_BOOL boardMacEnabled;}} */
-	{ BOARD_MAC_SPEED_AUTO, 0x0, 0x0, MV_TRUE}
+	{ BOARD_MAC_SPEED_AUTO, 0x0, 0x0, MV_TRUE},
+	{ BOARD_MAC_SPEED_AUTO, -1, -1, MV_FALSE},
+	{ BOARD_MAC_SPEED_AUTO, -1, -1, MV_FALSE}
 };
 
 MV_DEV_CS_INFO armada_38x_helios4_BoardDeCsInfo[] = {
