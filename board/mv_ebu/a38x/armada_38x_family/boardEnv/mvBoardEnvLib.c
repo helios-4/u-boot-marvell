@@ -1558,6 +1558,9 @@ MV_BOOL mvBoardIsGbEPortConnected(MV_U32 ethPortNum)
 		(mvCtrlPortIsSerdesRxaui(ethPortNum) && mvBoardPhyAddrGet(ethPortNum) != -1)))
 		return MV_TRUE;
 
+	if (!board->pBoardMacInfo[ethPortNum].boardMacEnabled)
+		return MV_FALSE;
+
 	/* print error in case invalid MAC entry */
 	if (mvCtrlPortIsRgmii(ethPortNum) && mvBoardPhyAddrGet(ethPortNum) == -1)
 		mvOsPrintf("Error: PHY Address of Port %d (RGMII) is invalid (-1).\n", ethPortNum);
